@@ -1,0 +1,39 @@
+{
+  "name": "tailwind-scss",
+  "version": "1.0.0",
+  "description": "tailwind sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "webpack --optimize-minimize --mode production",
+    "build": "webpack",
+    "sass:build": "sass src/scss/main.scss public/css/main.css --no-source-map",
+    "sass:prod": "sass src/scss/main.scss public/css/main.min.css --no-source-map --style compressed",
+    "sass:watch": "sass --watch src/scss/main.scss public/css/main.css --no-source-map && sass --watch",
+    "typescript:watch":"tsc --build tsconfig.json --watch",
+    "typescript:build":"tsc --build tsconfig.json",
+    "typescript:prod":"tsc --build tsconfig.json && uglifyjs public/js/tailwind.js --compress --mangle --output public/js/tailwind.min.js"
+  },
+  "keywords": [
+    "sass",
+    "tailwind"
+  ],
+  "author": "warlock",
+  "license": "ISC",
+  "dependencies": {
+    "@danielc7150/tailwind-scss": "^1.0.6",
+    "@types/node": "^14.11.8",
+    "@zeit/ncc": "^0.22.3",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

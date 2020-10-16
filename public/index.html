@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tailwind</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    
+</head>
+<body>
+    <nav class="flex flex-wrap items-center justify-between p-6 bg-teal-500">
+  <div class="flex items-center flex-shrink-0 mr-6 text-white">
+    <svg class="w-8 h-8 mr-2 fill-current" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+    <span class="text-xl font-semibold tracking-tight">Tailwind CSS</span>
+  </div>
+  <div class="block lg:hidden">
+    <button id='boton' class="flex items-center px-3 py-2 text-teal-200 border border-teal-400 rounded hover:text-white hover:border-white">
+      <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div id='menu' class="flex-grow hidden block w-full lg:block lg:flex lg:items-center lg:w-auto">
+    <div class="text-sm lg:flex-grow">
+      <a href="#responsive-header" class="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white">
+        Docs
+      </a>
+      <a href="#responsive-header" class="block mt-4 mr-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white">
+        Examples
+      </a>
+      <a href="#responsive-header" class="block mt-4 text-teal-200 lg:inline-block lg:mt-0 hover:text-white">
+        Blog
+      </a>
+    </div>
+    <div>
+      <a href="#" class="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-teal-500 hover:bg-white lg:mt-0">Download</a>
+    </div>
+  </div>
+</nav>
+<main class="flex">
+
+  <div class="w-2/12 p-4 px-4 py-8 bg-teal-500 border-r-4 border-white" id="menuElements">
+    <!-- <ul >
+      <li><a href="javascript:void(0)" onclick="reset()" data-url="acordion.html" class="px-6 text-white link-url" rel="noopener noreferrer">Acordion</a></li>
+            <li><a href="javascript:void(0)" onclick="reset()" data-url="alert.html" class="px-6 text-white link-url" rel="noopener noreferrer">Alert</a></li>
+            <li><a href="javascript:void(0)" data-url="badge.html" class="px-6 text-white link-url" rel="noopener noreferrer">Badge</a></li>
+            <li><a href="javascript:void(0)" data-url="breadcrumb.html" class="px-6 text-white link-url" rel="noopener noreferrer">Breadcrumb</a></li>
+            <li><a href="javascript:void(0)" data-url="buttons.html" class="px-6 text-white link-url" rel="noopener noreferrer">Buttons</a></li>
+            <li><a href="javascript:void(0)" data-url="cards.html" class="px-6 text-white link-url" rel="noopener noreferrer">Cards</a></li>
+            <li><a href="javascript:void(0)" data-url="" class="px-6 text-white link-url" rel="noopener noreferrer">Forms</a>
+              <ul>
+                <li><a href="javascript:void(0)" onclick="reset()" data-url="forms/input.html" class="px-10 text-white link-url" rel="noopener noreferrer">Input</a></li>
+                <li><a href="javascript:void(0)" data-url="forms/select.html" class="px-10 text-white link-url" rel="noopener noreferrer">Select</a></li>
+                <li><a href="javascript:void(0)" data-url="forms/radio.html" class="px-10 text-white link-url" rel="noopener noreferrer">Radio</a></li>
+                <li><a href="javascript:void(0)" data-url="forms/check.html" class="px-10 text-white link-url" rel="noopener noreferrer">Check</a></li>
+                <li><a href="javascript:void(0)" data-url="forms/switch.html" class="px-10 text-white link-url" rel="noopener noreferrer">Switch</a></li>
+                <li><a href="javascript:void(0)" data-url="forms/chip.html" class="px-10 text-white link-url" rel="noopener noreferrer">Chips</a></li>
+                <li><a href="javascript:void(0)" onclick="reset()" data-url="forms/range.html" class="px-10 text-white link-url" rel="noopener noreferrer">range</a></li>
+                <li><a href="javascript:void(0)" data-url="forms/picker.html" class="px-10 text-white link-url" rel="noopener noreferrer">Pickers</a></li>                
+              </ul>
+            </li>
+          </ul> -->
+  </div>
+  <div id="render" class="w-10/12 px-12 py-8">
+  </div>
+</main>
+<script src="js/tailwind.js"></script>
+<script>
+  Oz.init();
+  function reset(){    
+    setTimeout(()=>{
+      Oz.init();
+    },500);
+  }
+</script>
+<script src="js/main.js"></script>
+</div>    
+</body>
+</html>

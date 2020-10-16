@@ -1,0 +1,20 @@
+{
+    "version" : "1.0.0",
+    "compilerOptions" : {
+        "target": "ES5",
+        "module" : "amd", 
+        "removeComments" : true,
+        "outFile" : "public/js/dev/tailwind.dev.js",
+        "strict": true,
+        "baseUrl" : "src/typescript/",
+        "sourceMap" : false,  
+        "alwaysStrict" : true,
+        "declaration" : true,
+    },
+    "include": [
+        "./**/*.ts"
+    ],
+    "exclude": [
+        "public/js/dev/tailwind.dev.d.ts"
+    ]
+}

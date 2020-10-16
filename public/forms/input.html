@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div class="mt-12 container-fluid">
+      <div class="row"><h3>Input</h3></div>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Example label</label>
+            <input
+              type="tel"
+              max="10"
+              class="rounded form-control"
+              id="formGroupExampleInput"
+              placeholder="Example input placeholder"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-field">
+            <input
+            data-format="999-999-9999"
+              id="first_name"
+              type="tel"
+              placeholder="Example input placeholder"
+              class="validate"
+            />
+            <label for="first_name">First Name</label>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-2 col-form-label"
+                >Email</label
+              >
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <div class="row"><h3>TextArea</h3></div>
+      <div class="row">
+        <div class="col-6">
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="col-6"></div>
+        <div class="col-6">
+          <div class="form-group"> 
+            <label for="input-button">Input button</label>
+            <input id="input-button" type="button" class="rounded form-control btn btn-primary" value="valor" ></div>
+          
+          <div class="form-group"> 
+            <label for="input-color">Input color</label>
+            <input id="input-color" type="color" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-date">Input date</label>
+            <input id="input-date" type="date" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-datetime-local">Input datetime local</label>
+            <input id="input-datetime-local" type="datetime-local" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-email">Input email</label>
+            <input id="input-email" type="email" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <input id="input-file" type="file" class="rounded form-control" >
+            <label class="form-file-label" for="input-file">
+              <span class="form-file-text">Choose file...</span>
+              <span class="form-file-button">Browse</span>
+            </label>
+          </div>
+          <div class="form-group"> 
+            <label for="input-hidden">Input hidden</label>
+            <input id="input-hidden" type="hidden" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-image">Input image</label>
+            <input id="input-image" type="image" src="https://img.chilango.com/2018/02/el-increible-castillo-vagabundo.jpg" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-month">Input month</label>
+            <input id="input-month" type="month" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-number">Input number</label>
+            <input id="input-number" type="number" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-password">Input password</label>
+            <input id="input-password" type="password" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <div class="radio radio-danger">
+              <input id="input-radio" type="radio" name="radio-1" class="rounded form-control" >
+              <label for="input-radio">Input radio</label>
+            </div>            
+            </div>
+            <div class="form-control">
+              <div class="radio radio-success">
+              <input id="input-radio-1" type="radio" name="radio-1" class="rounded form-control" >
+              <label for="input-radio-2">Input radio</label>
+            </div>
+            </div>
+          <div class="form-group"> 
+            <label for="input-range">Input range</label>
+            <input id="input-range" min="0" value="0" type="range" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-reset">Input reset</label>
+            <input id="input-reset" type="reset" class="rounded form-control btn btn-warning" ></div>
+          <div class="form-group"> 
+            <label for="input-">Input search</label>
+            <input id="input-search" type="search" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-submit">Input submit</label>
+            <input id="input-submit" type="submit" value="value" class="rounded form-control btn btn-danger" ></div>
+          <div class="form-group"> 
+            <label for="input-tel">Input tel</label>
+            <input id="input-tel" type="tel" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-text">Input text</label>
+            <input id="input-text" type="text" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-time">Input time</label>
+            <input id="input-time" type="time" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-url">Input url</label>
+            <input id="input-url" type="url" class="rounded form-control" ></div>
+          <div class="form-group"> 
+            <label for="input-week">Input week</label>
+            <input id="input-week" type="week" class="rounded form-control" ></div>          
+      </div>
+    </div>
+    <script src="../js/tailwind.js"></script>
+    <script>
+      Oz.init();
+    </script>
+  </body>
+</html>
