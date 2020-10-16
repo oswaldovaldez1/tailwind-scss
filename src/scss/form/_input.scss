@@ -1,0 +1,218 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  &.row {
+    flex-direction: row;
+  }
+  & label {
+    padding-bottom: 0.5rem;
+  }
+
+  & textarea.form-control {
+    min-height: 41px;
+    height: auto;
+  }
+  & input.form-control {
+  }
+
+  & input[type="reset"],
+  & input[type="submit"],
+  & input[type="button"] {
+    width: max-content;
+  }
+
+  & textarea.form-control,
+  & input[type="color"].form-control,
+  & input[type="date"].form-control,
+  & input[type="datetime-local"].form-control,
+  & input[type="email"].form-control,
+  & input[type="file"].form-control,
+  & input[type="hidden"].form-control,
+  & input[type="image"].form-control,
+  & input[type="month"].form-control,
+  & input[type="number"].form-control,
+  & input[type="password"].form-control,
+  & input[type="search"].form-control,
+  & input[type="tel"].form-control,
+  & input[type="text"].form-control,
+  & input[type="time"].form-control,
+  & input[type="url"].form-control,
+  & input[type="week"].form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    border-width: 1.5px;
+    border-color: $teal-200;
+    border-style: solid;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem #c6f6d580;
+      outline-color: #c6f6d5;
+      &.danger {
+        box-shadow: 0 0 0 0.2rem $danger-color-50;
+        outline-color: $red-700;
+      }
+      &.success {
+        box-shadow: 0 0 0 0.2rem $success-color-50;
+        outline-color: $green-600;
+      }
+    }
+  }
+
+  & input[type="checkbox"].form-control {
+  }
+  & input[type="color"].form-control {
+    width: 50px;
+  }
+  & input[type="date"].form-control {
+    width: max-content;
+  }
+  & input[type="datetime-local"].form-control {
+    width: max-content;
+  }
+  & input[type="email"].form-control {
+  }
+  & input[type="file"].form-control {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: var(--bs-form-file-height);
+    margin: 0;
+    opacity: 0;
+  }
+
+  & label.form-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    height: var(--bs-form-file-height);
+    border-color: $teal-200;
+    border-radius: 0.25rem;
+    & .form-file-text {
+      display: block;
+      flex-grow: 1;
+      padding: 0.375rem 0.75rem;
+      overflow: hidden;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      background-color: #fff;
+      border-color: inherit;
+      border-style: solid;
+      border-width: 1px;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+    }
+    & span.form-file-button {
+      display: block;
+      flex-shrink: 0;
+      padding: 0.375rem 0.75rem;
+      margin-left: -1px;
+      line-height: 1.5;
+      color: #495057;
+      background-color: $teal-200;
+      border-color: inherit;
+      border-style: solid;
+      border-width: 1px;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      &:focus {
+        background-color: $teal-400;
+      }
+    }
+  }
+
+  & input[type="hidden"].form-control {
+  }
+  & input[type="image"].form-control {
+    position: relative;
+    height: auto;
+  }
+  & input[type="month"].form-control {
+    width: max-content;
+  }
+  & input[type="number"].form-control {
+  }
+  & input[type="password"].form-control {
+    -webkit-text-security: disc;
+  }
+  & input[type="radio"].form-control {
+  }
+
+  & input[type="reset"].form-control {
+  }
+  & input[type="search"].form-control {
+  }
+
+  & input[type="tel"].form-control {
+  }
+  & input[type="text"].form-control {
+  }
+  & input[type="time"].form-control {
+    width: max-content;
+  }
+  & input[type="url"].form-control {
+  }
+  & input[type="week"].form-control {
+    width: max-content;
+  }
+}
+
+.input-field {
+  position: relative;
+  & label {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+  }
+  & label {
+    transition: 0.6s;
+  }
+
+  & input {
+    border-bottom-width: 1.5px;
+    border-bottom-color: $teal-200;
+    border-bottom-style: solid;
+    outline-color: transparent;
+    transition: 0.3s;
+    &:focus {
+      outline-color: transparent;
+    }
+    & + label.up,
+    &:focus + label {
+      left: 5px;
+      font-size: 12px;
+      top: -10px;
+    }
+  }
+}
+
+textarea.danger,
+textarea.danger:focus,
+input.danger,
+input.danger:focus {
+  border-color: $red-700 !important;
+}
+textarea.success:focus,
+input.success:focus,
+textarea.success,
+input.success {
+  border-color: $green-600 !important;
+}

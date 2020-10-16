@@ -1,0 +1,37 @@
+
+
+
+.breadcrumb{
+    @extend .flex;    
+    @extend .flex-wrap;
+    //padding: .75rem 1rem;
+    @extend .px-3;
+    @extend .py-4;
+    @extend .mb-4;
+    @extend .list-none;
+    @extend .bg-gray-300;
+    @extend .rounded;
+}
+
+.breadcrumb-item{
+    @extend .flex;
+    @extend .text-gray-600;
+    & + &{
+        @extend .pl-2;
+        &::before{
+            @extend .inline-block;
+            @extend .pr-2;
+            @extend .text-gray-500;
+            content: "/";
+        }
+    }
+    & a{
+        @extend .text-teal-500;
+        &:hover{
+            @extend .text-teal-700;
+        }
+    }
+    & .active{
+            @extend .text-gray-700;
+    }
+}

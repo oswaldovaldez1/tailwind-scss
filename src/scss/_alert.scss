@@ -1,0 +1,65 @@
+.alert{    
+    @extend .relative;
+    @extend .py-3;
+    @extend .px-5;
+    @extend .mb-4;
+    @extend .border;
+    @extend .border-transparent;
+    @extend .rounded;
+    &[role=topRight],
+    &[role=topLeft]
+    {
+        transition: top 100ms;
+    }
+    &[role=bottomRight],
+    &[role=bottomLeft]
+    {
+        transition: bottom 100ms;
+    }
+}
+
+
+
+.alert-primary{
+    @extend .text-teal-700;
+    @extend .bg-teal-200;
+    @extend .border-teal-700;    
+}
+
+.alert-secondary{
+    @extend .text-indigo-700;
+    @extend .bg-indigo-200;
+    @extend .border-indigo-700;    
+}
+
+.alert-success{
+    @extend .text-green-700;
+    @extend .bg-green-200;
+    @extend .border-green-700;    
+}
+.alert-danger{
+    @extend .text-red-700;
+    @extend .bg-red-200;
+    @extend .border-red-700;    
+}
+.alert-warning{
+    @extend .text-yellow-700;
+    @extend .bg-yellow-200;
+    @extend .border-yellow-700;    
+}
+.alert-info{
+    @extend .text-blue-700;
+    @extend .bg-blue-200;
+    @extend .border-blue-700;    
+}
+
+.alert-light{
+    @extend .text-gray-700;
+    @extend .bg-gray-200;
+    @extend .border-gray-700;    
+}
+.alert-dark{
+    @extend .text-black;
+    @extend .bg-gray-400;
+    @extend .border-black;      
+}

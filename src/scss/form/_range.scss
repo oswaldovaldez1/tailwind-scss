@@ -1,0 +1,504 @@
+.form-group {
+  & > input[type="range"].form-control {
+    position: relative;
+    background-color: transparent;
+    border-bottom-color: $teal-300;
+    width: 100%;
+    height: 1.5rem;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    appearance: none;
+    --content: " 0 ";
+
+    //&::-ms-thumb,
+    &::-moz-range-thumb {
+      border: 1px solid $teal-200;
+      height: 15px;
+      width: 15px;
+      border-radius: 100%;
+      background: $teal-500;
+      cursor: pointer;
+      margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $teal-200; /* Add cool effects to your sliders! */
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: 1px solid $teal-200;
+      height: 15px;
+      width: 15px;
+      border-radius: 100%;
+      background: $teal-500;
+      cursor: pointer;
+      margin-top: -5px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+      box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $teal-200; /* Add cool effects to your sliders! */
+      &:focus {
+        background: $teal-500;
+      }
+    }
+
+    &::after {
+      display: block;
+      clear: both;
+      content: var(--content);
+      font-size: 12px;
+      position: absolute;
+      top: 3px;
+      left: 100%;
+      width: 10px;
+      height: 10px;
+    }
+    /**/
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $teal-200;
+      background: $teal-500;
+      border-radius: 2rem;
+      border: 0.2px solid $teal-200;
+    }
+
+    &::-moz-range-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $teal-200;
+      background: $teal-500;
+      border-radius: 2rem;
+      border: 0.2px solid $teal-200;
+    }
+
+    &::-ms-track {
+      width: 100%;
+      height: 8.4px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      border-width: 16px 0;
+      color: transparent;
+    }
+    &::-ms-fill-lower {
+      background: $teal-500;
+      border: 0.2px solid $teal-200;
+      border-radius: 2rem;
+      box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $teal-200;
+    }
+    &:focus::-ms-fill-lower {
+      background: $teal-500;
+    }
+    &::-ms-fill-upper {
+      background: $teal-500;
+      border: 0.2px solid $teal-200;
+      border-radius: 2rem;
+      box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $teal-200;
+    }
+    &:focus {
+      outline-color: transparent;
+      &::-ms-fill-upper {
+        background: $teal-500;
+      }
+      &::-webkit-slider-runnable-track {
+        background: $teal-500;
+      }
+    }
+
+    &.primary {
+      border-bottom-color: $primary-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $white;
+        background: $primary-color;
+        box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $primary-color-40; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $white;
+        background: $primary-color;
+        box-shadow: 1px 1px 1px $primary-color-40, 0px 0px 1px $primary-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        box-shadow: 1px 1px 1px $primary-color-40, 0px 0px 1px $primary-color-20;
+        background: $primary-color;
+        border-color: $white;
+      }
+
+      &::-moz-range-track {
+        box-shadow: 1px 1px 1px $primary-color-40, 0px 0px 1px $primary-color-20;
+        background: $primary-color;
+        border-color: $white;
+      }
+
+      &::-ms-fill-lower {
+        background: $primary-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $primary-color-40, 0px 0px 1px $primary-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $primary-color;
+      }
+      &::-ms-fill-upper {
+        background: $primary-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $primary-color-40, 0px 0px 1px $primary-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $primary-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $primary-color;
+        }
+      }
+    }
+    &.secondary {
+      border-bottom-color: $secondary-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $white;
+        background: $secondary-color;
+        box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $secondary-color-40; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $white;
+        background: $secondary-color;
+        box-shadow: 1px 1px 1px $secondary-color-40,
+          0px 0px 1px $secondary-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        box-shadow: 1px 1px 1px $secondary-color-40,
+          0px 0px 1px $secondary-color-20;
+        background: $secondary-color;
+        border-color: $white;
+      }
+
+      &::-moz-range-track {
+        box-shadow: 1px 1px 1px $secondary-color-40,
+          0px 0px 1px $secondary-color-20;
+        background: $secondary-color;
+        border-color: $white;
+      }
+
+      &::-ms-fill-lower {
+        background: $secondary-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $secondary-color-40,
+          0px 0px 1px $secondary-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $secondary-color;
+      }
+      &::-ms-fill-upper {
+        background: $secondary-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $secondary-color-40,
+          0px 0px 1px $secondary-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $secondary-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $secondary-color;
+        }
+      }
+    }
+    &.success {
+      border-bottom-color: $success-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $white;
+        background: $success-color;
+        box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $success-color-40; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $white;
+        background: $success-color;
+        box-shadow: 1px 1px 1px $success-color-40, 0px 0px 1px $success-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        box-shadow: 1px 1px 1px $success-color-40, 0px 0px 1px $success-color-20;
+        background: $success-color;
+        border-color: $white;
+      }
+
+      &::-moz-range-track {
+        box-shadow: 1px 1px 1px $success-color-40, 0px 0px 1px $success-color-20;
+        background: $success-color;
+        border-color: $white;
+      }
+
+      &::-ms-fill-lower {
+        background: $success-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $success-color-40, 0px 0px 1px $success-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $success-color;
+      }
+      &::-ms-fill-upper {
+        background: $success-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $success-color-40, 0px 0px 1px $success-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $success-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $success-color;
+        }
+      }
+    }
+    &.danger {
+      border-bottom-color: $danger-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $white;
+        background: $danger-color;
+        box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $danger-color-40; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $white;
+        background: $danger-color;
+        box-shadow: 1px 1px 1px $danger-color-40, 0px 0px 1px $danger-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        box-shadow: 1px 1px 1px $danger-color-40, 0px 0px 1px $danger-color-20;
+        background: $danger-color;
+        border-color: $white;
+      }
+
+      &::-moz-range-track {
+        box-shadow: 1px 1px 1px $danger-color-40, 0px 0px 1px $danger-color-20;
+        background: $danger-color;
+        border-color: $white;
+      }
+
+      &::-ms-fill-lower {
+        background: $danger-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $danger-color-40, 0px 0px 1px $danger-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $danger-color;
+      }
+      &::-ms-fill-upper {
+        background: $danger-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $danger-color-40, 0px 0px 1px $danger-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $danger-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $danger-color;
+        }
+      }
+    }
+    &.warning {
+      border-bottom-color: $warning-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $white;
+        background: $warning-color;
+        box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $warning-color-40; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $white;
+        background: $warning-color;
+        box-shadow: 1px 1px 1px $warning-color-40, 0px 0px 1px $warning-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        box-shadow: 1px 1px 1px $warning-color-40, 0px 0px 1px $warning-color-20;
+        background: $warning-color;
+        border-color: $white;
+      }
+
+      &::-moz-range-track {
+        box-shadow: 1px 1px 1px $warning-color-40, 0px 0px 1px $warning-color-20;
+        background: $warning-color;
+        border-color: $white;
+      }
+
+      &::-ms-fill-lower {
+        background: $warning-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $warning-color-40, 0px 0px 1px $warning-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $warning-color;
+      }
+      &::-ms-fill-upper {
+        background: $warning-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $warning-color-40, 0px 0px 1px $warning-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $warning-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $warning-color;
+        }
+      }
+    }
+    &.info {
+      border-bottom-color: $info-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $white;
+        background: $info-color;
+        box-shadow: 1px 1px 1px $info-color-40, 0px 0px 1px $info-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $white;
+        background: $info-color;
+        box-shadow: 1px 1px 1px $info-color-40, 0px 0px 1px $info-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        box-shadow: 1px 1px 1px $info-color-40, 0px 0px 1px $info-color-20;
+        background: $info-color;
+        border-color: $white;
+      }
+
+      &::-moz-range-track {
+        box-shadow: 1px 1px 1px $info-color-40, 0px 0px 1px $info-color-20;
+        background: $info-color;
+        border-color: $white;
+      }
+
+      &::-ms-fill-lower {
+        background: $info-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $info-color-40, 0px 0px 1px $info-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $info-color;
+      }
+      &::-ms-fill-upper {
+        background: $info-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $info-color-40, 0px 0px 1px $info-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $info-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $info-color;
+        }
+      }
+    }
+    &.light {
+      border-bottom-color: $light-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $dark-color-50;
+        background: $light-color;
+        box-shadow: 1px 1px 1px $teal-200, 0px 0px 1px $light-color-40; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $dark-color-50;
+        background: $light-color;
+        box-shadow: 1px 1px 1px $light-color-40, 0px 0px 1px $light-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        box-shadow: 1px 1px 1px $light-color-40, 0px 0px 1px $light-color-20;
+        background: $light-color;
+        border-color: $dark-color-50;
+      }
+
+      &::-moz-range-track {
+        box-shadow: 1px 1px 1px $light-color-40, 0px 0px 1px $light-color-20;
+        background: $light-color;
+        border-color: $dark-color-50;
+      }
+
+      &::-ms-fill-lower {
+        background: $light-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $light-color-40, 0px 0px 1px $light-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $light-color;
+      }
+      &::-ms-fill-upper {
+        background: $light-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $light-color-40, 0px 0px 1px $light-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $light-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $light-color;
+        }
+      }
+    }
+    &.dark {
+      border-bottom-color: $dark-color-30;
+      //&::-ms-thumb,
+      &::-moz-range-thumb {
+        border-color: $white;
+        background: $dark-color;
+        box-shadow: 1px 1px 1px $dark-color-40, 0px 0px 1px $dark-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-thumb {
+        border-color: $white;
+        background: $dark-color;
+        box-shadow: 1px 1px 1px $dark-color-40, 0px 0px 1px $dark-color-20; /* Add cool effects to your sliders! */
+      }
+      &::-webkit-slider-runnable-track {
+        border-color: $white;
+        box-shadow: 1px 1px 1px $dark-color-40, 0px 0px 1px $dark-color-20;
+        background: $dark-color;
+      }
+
+      &::-moz-range-track {
+        border-color: $white;
+        box-shadow: 1px 1px 1px $dark-color-40, 0px 0px 1px $dark-color-20;
+        background: $dark-color;
+      }
+
+      &::-ms-fill-lower {
+        background: $dark-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $dark-color-40, 0px 0px 1px $dark-color-20;
+      }
+      &:focus::-ms-fill-lower {
+        background: $dark-color;
+      }
+      &::-ms-fill-upper {
+        background: $dark-color;
+        border: 0.2px solid $teal-200;
+        border-radius: 2rem;
+        box-shadow: 1px 1px 1px $dark-color-40, 0px 0px 1px $dark-color-20;
+      }
+      &:focus {
+        &::-ms-fill-upper {
+          background: $dark-color;
+        }
+        &::-webkit-slider-runnable-track {
+          background: $dark-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,208 @@
+.chip {
+  position: relative;
+  & input[type="checkbox"] {
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    opacity: 0;
+    &:checked {
+      & + label {
+        &::after {
+          transform: translateX(20px);
+        }
+        &::before {
+          background-color: $teal-400;
+        }
+      }
+    }
+  }
+  & label {
+    padding-left: 40px;
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 40px;
+      height: 20px;
+      left: 0px;
+      border-radius: 2rem;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $white;
+      background-color: $teal-200;
+      transition: left 1s linear;
+      transition: 0.4s;
+      margin-top: 2px;
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0px;
+      background-color: $teal-600;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $white;
+      border-radius: 100%;
+      transition: 0.4s;
+      margin-top: 2px;
+    }
+  }
+  &.primary {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $primary-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      &::before {
+        background-color: $primary-color-20;
+      }
+      &::after {
+        background-color: $primary-color-70;
+      }
+    }
+  }
+  &.secondary {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $secondary-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      &::before {
+        background-color: $secondary-color-20;
+      }
+      &::after {
+        background-color: $secondary-color-70;
+      }
+    }
+  }
+  &.success {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $success-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      &::before {
+        background-color: $success-color-20;
+      }
+      &::after {
+        background-color: $success-color-70;
+      }
+    }
+  }
+  &.danger {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $danger-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      &::before {
+        background-color: $danger-color-20;
+      }
+      &::after {
+        background-color: $danger-color-70;
+      }
+    }
+  }
+  &.warning {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $warning-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      &::before {
+        background-color: $warning-color-20;
+      }
+      &::after {
+        background-color: $warning-color-70;
+      }
+    }
+  }
+  &.info {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $info-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      &::before {
+        background-color: $info-color-20;
+      }
+      &::after {
+        background-color: $info-color-70;
+      }
+    }
+  }
+  &.light {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $light-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      color: $light-color-40;
+      &::before {
+        background-color: $light-color-20;
+        border-color: $dark-color-60;
+      }
+      &::after {
+        background-color: $light-color-70;
+        border-color: $dark-color-60;
+      }
+    }
+  }
+  &.dark {
+    & input[type="checkbox"] {
+      &:checked {
+        & + label {
+          &::before {
+            background-color: $dark-color-60;
+          }
+        }
+      }
+    }
+    & label {
+      &::before {
+        background-color: $dark-color-20;
+      }
+      &::after {
+        background-color: $dark-color-70;
+      }
+    }
+  }
+}

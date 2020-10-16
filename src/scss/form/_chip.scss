@@ -1,0 +1,26 @@
+.chip {
+  padding: 0.25em 0.4em;
+  padding-right: 0.8em;
+  background-color: $teal-300;
+  font-size: 12px;
+  color: $white;
+  position: relative;
+  &::after {
+    content: "x";
+    position: absolute;
+
+    color: $teal-300;
+    background-color: $light-color;
+    border-radius: 100%;
+    z-index: 1;
+  }
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $light-color;
+    border-radius: 100%;
+    z-index: 1;
+  }
+}

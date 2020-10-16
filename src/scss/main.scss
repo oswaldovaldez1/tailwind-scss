@@ -1,0 +1,41 @@
+// @import "../../node_modules/@danielc7150/tailwind-scss/index";
+// @import "../../ant/node_modules/tailwind-sass/index";
+@import "tailwind-scss/index";
+@import "colors";
+@import "var";
+@import "alert";
+@import "badge";
+@import "breadcrumb";
+@import "buttons";
+@import "flexboxgrid";
+@import "card";
+@import "form/form";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+  overflow-y: auto;
+}
+
+.container,
+.container-fluid {
+  padding-top: 1rem;
+}
+.row {
+  padding-top: 1rem;
+}
+
+[class^="col-"],
+[class*=" col-"] {
+  padding-top: 1rem;
+}
+#menuElements,
+#render {
+  overflow: hidden;
+  height: 87vh;
+  overflow-y: auto;
+}

@@ -1,0 +1,298 @@
+.btn {
+  @extend .inline-block;
+  @extend .font-normal;
+  @extend .text-center;
+  @extend .align-middle;
+  user-select: none;
+  width: max-content;
+  //@extend .bg-transparent;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.375rem 0.75rem;
+  @extend .text-base;
+  @extend .leading-normal;
+  @extend .rounded;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover {
+    @extend .no-underline;
+  }
+  &.disabled,
+  &:disabled {
+    opacity: 0.65;
+  }
+}
+
+.btn-primary {
+  @extend .text-white;
+  @extend .bg-teal-700;
+  @extend .border-teal-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-teal-700;
+    @extend .border-teal-700;
+    box-shadow: 0 0 0 0.2rem $primary-color-50;
+    outline-color: $primary-color;
+  }
+}
+.btn-secondary {
+  @extend .text-white;
+  @extend .bg-indigo-700;
+  @extend .border-indigo-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-indigo-700;
+    @extend .border-indigo-700;
+    box-shadow: 0 0 0 0.2rem $secondary-color-50;
+    outline-color: $secondary-color;
+  }
+}
+.btn-success {
+  @extend .text-white;
+  @extend .bg-green-600;
+  @extend .border-green-600;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-green-600;
+    @extend .border-green-600;
+    box-shadow: 0 0 0 0.2rem $success-color-50;
+    outline-color: $success-color-50;
+  }
+}
+.btn-danger {
+  @extend .text-white;
+  @extend .bg-red-700;
+  @extend .border-red-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-red-700;
+    @extend .border-red-700;
+    box-shadow: 0 0 0 0.2rem $danger-color-50;
+    outline-color: $danger-color;
+  }
+}
+.btn-warning {
+  @extend .text-black;
+  @extend .bg-yellow-500;
+  @extend .border-yellow-500;
+
+  &:focus {
+    @extend .text-black;
+    @extend .bg-yellow-500;
+    @extend .border-yellow-500;
+    box-shadow: 0 0 0 0.2rem $warning-color-50;
+    outline-color: $warning-color;
+  }
+}
+.btn-info {
+  @extend .text-white;
+  @extend .bg-blue-700;
+  @extend .border-blue-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-blue-700;
+    @extend .border-blue-700;
+    box-shadow: 0 0 0 0.2rem $info-color-50;
+    outline-color: $info-color;
+  }
+}
+.btn-light {
+  @extend .text-white;
+  @extend .bg-gray-400;
+  @extend .border-gray-400;
+
+  &:focus {
+    @extend .text-black;
+    @extend .bg-gray-400;
+    @extend .border-gray-400;
+    box-shadow: 0 0 0 0.2rem #cbd5e080;
+    outline-color: #cbd5e0;
+  }
+}
+.btn-dark {
+  @extend .text-white;
+  @extend .bg-black;
+  @extend .border-black;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-black;
+    @extend .border-black;
+    box-shadow: 0 0 0 0.2rem #00000080;
+    outline-color: #000000;
+  }
+}
+
+.btn-link {
+  @extend .text-blue-600;
+  @extend .bg-transparent;
+  @extend .border-transparent;
+  &:hover {
+    @extend .underline;
+  }
+  &:focus {
+    @extend .text-blue-700;
+    outline-color: transparent;
+  }
+}
+
+/*.......................outline.........................*/
+
+.btn-outline-primary {
+  @extend .text-teal-700;
+  @extend .border-teal-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-teal-700;
+    @extend .border-teal-700;
+    box-shadow: 0 0 0 0.2rem #2f855a80;
+    outline-color: #2f855a;
+  }
+  &:hover {
+    @extend .text-white;
+    @extend .bg-teal-700;
+    @extend .border-teal-700;
+  }
+}
+.btn-outline-secondary {
+  @extend .text-indigo-700;
+  @extend .border-indigo-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-indigo-700;
+    @extend .border-indigo-700;
+    box-shadow: 0 0 0 0.2rem #4c51bf80;
+    outline-color: #4c51bf;
+  }
+  &:hover {
+    @extend .text-white;
+    @extend .bg-indigo-700;
+    @extend .border-indigo-700;
+  }
+}
+.btn-outline-success {
+  @extend .text-green-600;
+  @extend .border-green-600;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-green-600;
+    @extend .border-green-600;
+    box-shadow: 0 0 0 0.2rem #38a16980;
+    outline-color: #38a169;
+  }
+  &:hover {
+    @extend .text-white;
+    @extend .bg-green-600;
+    @extend .border-green-600;
+  }
+}
+.btn-outline-danger {
+  @extend .text-red-700;
+  @extend .border-red-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-red-700;
+    @extend .border-red-700;
+    box-shadow: 0 0 0 0.2rem #c5303080;
+    outline-color: #c53030;
+  }
+  &:hover {
+    @extend .text-white;
+    @extend .bg-red-700;
+    @extend .border-red-700;
+  }
+}
+.btn-outline-warning {
+  @extend .text-black;
+  @extend .border-yellow-500;
+
+  &:focus {
+    @extend .text-black;
+    @extend .bg-yellow-500;
+    @extend .border-yellow-500;
+    box-shadow: 0 0 0 0.2rem #ecc94b80;
+    outline-color: #ecc94b;
+  }
+  &:hover {
+    @extend .text-white;
+    @extend .bg-yellow-500;
+    @extend .border-yellow-500;
+  }
+}
+.btn-outline-info {
+  @extend .text-blue-700;
+  @extend .border-blue-700;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-blue-700;
+    @extend .border-blue-700;
+    box-shadow: 0 0 0 0.2rem #2b6cb080;
+    outline-color: #2b6cb0;
+  }
+  &:hover {
+    @extend .text-white;
+    @extend .bg-blue-700;
+    @extend .border-blue-700;
+  }
+}
+.btn-outline-light {
+  @extend .text-white;
+  @extend .border-gray-400;
+
+  &:focus {
+    @extend .text-black;
+    @extend .bg-gray-400;
+    box-shadow: 0 0 0 0.2rem #cbd5e080;
+    outline-color: #cbd5e0;
+  }
+  &:hover {
+    @extend .text-black;
+    @extend .bg-gray-400;
+  }
+}
+.btn-outline-dark {
+  @extend .text-black;
+  @extend .border-black;
+
+  &:focus {
+    @extend .text-white;
+    @extend .bg-black;
+    @extend .border-black;
+    box-shadow: 0 0 0 0.2rem #00000080;
+    outline-color: #000000;
+  }
+  &:hover {
+    @extend .text-white;
+    @extend .bg-black;
+    @extend .border-black;
+  }
+}
+/*................tamaños......................*/
+.btn-lg {
+  @extend .py-2;
+  @extend .px-4;
+  @extend .text-xl;
+  @extend .leading-normal;
+  border-radius: 0.3rem;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn-sm {
+  @extend .py-1;
+  @extend .px-2;
+  @extend .text-sm;
+  @extend .leading-normal;
+  border-radius: 0.2rem;
+}

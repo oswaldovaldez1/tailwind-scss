@@ -1,0 +1,27 @@
+.card{
+    border: 1px solid $teal-300;
+    & .card-header{
+            padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: $teal-200;
+    border-bottom: 1px solid $teal-300;
+    }
+    & .card-body{
+            flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+        & .card-title{
+                margin-bottom: .75rem;
+        }
+        & .card-text{
+            margin-bottom: 1rem;
+        }
+
+    }
+    .card-footer{
+        padding: .75rem 1.25rem;
+        background-color: $teal-200;
+        border-top: 1px solid $teal-300;        
+    }
+
+}
